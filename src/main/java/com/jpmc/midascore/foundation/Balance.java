@@ -1,6 +1,7 @@
 package com.jpmc.midascore.foundation;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Balance {
@@ -13,10 +14,12 @@ public class Balance {
         this.amount = amount;
     }
 
+    @JsonProperty("balance")
     public float getAmount() {
         return amount;
     }
 
+    @JsonProperty("balance")
     public void setAmount(float amount) {
         this.amount = amount;
     }
